@@ -1,0 +1,272 @@
+{
+  "url": "https://example.com/",
+  "score": 78,
+  "grade": "B",
+  "plan": "free",
+  "dailyUsage": { "used": 1, "limit": 3 },
+  "summary": { "passed": 12, "warnings": 6, "errors": 2, "total": 20 },
+  "checks": [
+    {
+      "id": "title",
+      "title": "Sayfa Başlığı",
+      "category": "onpage",
+      "severity": "success",
+      "summary": "Title etiketi 52 karakter ile ideal aralıkta.",
+      "value": "Örnek Site — Ana Sayfa",
+      "howToFix": ["Başlığı 50-60 karakter arasında tutun."],
+      "proDetail": "title > 60 karakterse Google kesebilir.",
+      "weight": 8,
+      "score": 1
+    },
+    {
+      "id": "meta-description",
+      "title": "Meta Açıklama",
+      "category": "onpage",
+      "severity": "warning",
+      "summary": "Meta açıklaması 142 karakter; biraz uzun.",
+      "value": "…",
+      "howToFix": ["Açıklamayı 155 karakterin altına indirin."],
+      "weight": 7,
+      "score": 0.6
+    },
+    {
+      "id": "h1",
+      "title": "H1 Etiketi",
+      "category": "onpage",
+      "severity": "success",
+      "summary": "Sayfada tam bir H1 var.",
+      "howToFix": ["H1'i koruyun."],
+      "weight": 8,
+      "score": 1
+    },
+    {
+      "id": "heading-hierarchy",
+      "title": "Başlık Hiyerarşisi",
+      "category": "content",
+      "severity": "success",
+      "summary": "H1→H2→H3 sıralaması düzgün.",
+      "howToFix": ["Seviye atlamayın."],
+      "weight": 5,
+      "score": 1
+    },
+    {
+      "id": "images-alt",
+      "title": "Görsel Alt Etiketleri",
+      "category": "content",
+      "severity": "error",
+      "summary": "3 görselde alt metni yok.",
+      "howToFix": ["Tüm img etiketlerine açıklayıcı alt yazın."],
+      "weight": 6,
+      "score": 0
+    },
+    {
+      "id": "images-dimensions",
+      "title": "Görsel Boyutları",
+      "category": "technical",
+      "severity": "warning",
+      "summary": "2 görselde width/height eksik.",
+      "howToFix": ["width ve height ekleyerek CLS'i düşürün."],
+      "weight": 4,
+      "score": 0.5
+    },
+    {
+      "id": "links-structure",
+      "title": "Link Yapısı",
+      "category": "links",
+      "severity": "success",
+      "summary": "İç/dış link dengesi iyi.",
+      "howToFix": ["İç link sayısını artırın."],
+      "weight": 5,
+      "score": 0.9
+    },
+    {
+      "id": "links-broken",
+      "title": "Kırık Bağlantılar",
+      "category": "links",
+      "severity": "error",
+      "summary": "1 kırık bağlantı bulundu.",
+      "howToFix": ["404 dönen linkleri düzeltin."],
+      "weight": 6,
+      "score": 0
+    },
+    {
+      "id": "https",
+      "title": "HTTPS",
+      "category": "technical",
+      "severity": "success",
+      "summary": "Sayfa HTTPS üzerinden sunuluyor.",
+      "howToFix": ["SSL sertifikasını güncel tutun."],
+      "weight": 8,
+      "score": 1
+    },
+    {
+      "id": "robots-txt",
+      "title": "robots.txt",
+      "category": "technical",
+      "severity": "success",
+      "summary": "robots.txt mevcut.",
+      "howToFix": ["Sitemap referansını ekleyin."],
+      "weight": 5,
+      "score": 1
+    },
+    {
+      "id": "sitemap",
+      "title": "sitemap.xml",
+      "category": "technical",
+      "severity": "success",
+      "summary": "sitemap.xml mevcut.",
+      "howToFix": ["Güncel tutun."],
+      "weight": 5,
+      "score": 1
+    },
+    {
+      "id": "open-graph",
+      "title": "Open Graph",
+      "category": "onpage",
+      "severity": "warning",
+      "summary": "og:image eksik.",
+      "howToFix": ["og:image ekleyin."],
+      "weight": 4,
+      "score": 0.5
+    },
+    {
+      "id": "twitter-card",
+      "title": "Twitter Card",
+      "category": "onpage",
+      "severity": "error",
+      "summary": "Twitter kartı tanımlı değil.",
+      "howToFix": ["twitter:card meta etiketi ekleyin."],
+      "weight": 3,
+      "score": 0
+    },
+    {
+      "id": "structured-data",
+      "title": "Yapısal Veri",
+      "category": "technical",
+      "severity": "warning",
+      "summary": "JSON-LD bulundu ama Organization tipi yok.",
+      "howToFix": ["Organization şeması ekleyin."],
+      "weight": 5,
+      "score": 0.6
+    },
+    {
+      "id": "viewport",
+      "title": "Viewport",
+      "category": "technical",
+      "severity": "success",
+      "summary": "Mobil viewport tanımlı.",
+      "howToFix": ["width=device-width koruyun."],
+      "weight": 5,
+      "score": 1
+    },
+    {
+      "id": "html-lang",
+      "title": "HTML lang",
+      "category": "technical",
+      "severity": "success",
+      "summary": "lang=\"tr\" tanımlı.",
+      "howToFix": ["Doğru dil kodunu koruyun."],
+      "weight": 3,
+      "score": 1
+    },
+    {
+      "id": "canonical",
+      "title": "Canonical",
+      "category": "onpage",
+      "severity": "success",
+      "summary": "Canonical etiketi doğru.",
+      "howToFix": ["Self-referanslı canonical koruyun."],
+      "weight": 5,
+      "score": 1
+    },
+    {
+      "id": "content-length",
+      "title": "İçerik Uzunluğu",
+      "category": "content",
+      "severity": "success",
+      "summary": "620 kelime yeterli.",
+      "howToFix": ["İçeriği 600+ kelime tutun."],
+      "weight": 5,
+      "score": 1
+    },
+    {
+      "id": "hreflang",
+      "title": "hreflang",
+      "category": "technical",
+      "severity": "info",
+      "summary": "Tek dilli site için hreflang gerekmiyor.",
+      "howToFix": ["Çok dilli olursa hreflang ekleyin."],
+      "weight": 2,
+      "score": 1
+    },
+    {
+      "id": "html-weight",
+      "title": "HTML Ağırlığı",
+      "category": "technical",
+      "severity": "success",
+      "summary": "HTML boyutu 98 KB; iyi.",
+      "howToFix": ["Gereksiz satır içi stilleri temizleyin."],
+      "weight": 4,
+      "score": 1
+    }
+  ],
+  "metrics": {
+    "url": "https://example.com/",
+    "finalUrl": "https://example.com/",
+    "fetchedAt": "2026-11-01T12:00:00.000Z",
+    "loadTimeMs": 412,
+    "htmlSizeBytes": 100288,
+    "title": "Örnek Site — Ana Sayfa",
+    "titleLength": 22,
+    "metaDescription": "Örnek açıklama metni.",
+    "metaDescriptionLength": 22,
+    "canonical": "https://example.com/",
+    "lang": "tr",
+    "viewport": "width=device-width, initial-scale=1",
+    "charset": "utf-8",
+    "headings": {
+      "h1": ["Ana Başlık"],
+      "h2": ["Bölüm 1", "Bölüm 2"],
+      "h3": ["Alt başlık"],
+      "h4": [],
+      "h5": [],
+      "h6": []
+    },
+    "images": {
+      "total": 5,
+      "missingAlt": 3,
+      "missingAltSrcs": ["/a.png", "/b.png", "/c.png"],
+      "emptyAlt": 0,
+      "missingDimensions": 2,
+      "lazyLoaded": 4
+    },
+    "links": {
+      "total": 24,
+      "internal": 18,
+      "external": 6,
+      "noFollow": 2,
+      "empty": 0,
+      "checked": 12,
+      "broken": [{ "href": "https://example.com/kayip", "status": 404 }]
+    },
+    "technical": {
+      "isHttps": true,
+      "hasRobotsTxt": true,
+      "robotsTxtContent": "User-agent: *\nAllow: /",
+      "hasSitemapXml": true,
+      "hasFavicon": true,
+      "hasOpenGraph": true,
+      "openGraphKeys": ["og:title", "og:description", "og:url"],
+      "hasTwitterCard": false,
+      "hasStructuredData": true,
+      "structuredDataTypes": ["WebSite"],
+      "hasHreflang": false,
+      "inlineStyles": 3,
+      "scriptCount": 7,
+      "stylesheetCount": 2
+    },
+    "wordCount": 620,
+    "textToHtmlRatio": 0.31,
+    "contentLength": 4120
+  }
+}

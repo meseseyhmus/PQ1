@@ -1,0 +1,73 @@
+{
+    "browser":  {
+                    "executable_path":  "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+                    "mode":  "launch"
+                },
+    "actions":  [
+                    {
+                        "step_id":  "wait_load",
+                        "duration_ms":  1000,
+                        "action":  "wait_for_timeout"
+                    },
+                    {
+                        "timeout_ms":  5000,
+                        "locator":  {
+                                        "kind":  "css",
+                                        "selector":  "#demolar button:has-text(\u0027E-Ticaret\u0027)"
+                                    },
+                        "step_id":  "filter_ecommerce",
+                        "action":  "click"
+                    },
+                    {
+                        "step_id":  "wait_filter",
+                        "duration_ms":  800,
+                        "action":  "wait_for_timeout"
+                    },
+                    {
+                        "timeout_ms":  5000,
+                        "locator":  {
+                                        "kind":  "css",
+                                        "selector":  "#fiyat-hesapla button:has-text(\u0027Özel Web Uygulaması\u0027)"
+                                    },
+                        "step_id":  "select_custom_app",
+                        "action":  "click"
+                    },
+                    {
+                        "timeout_ms":  5000,
+                        "locator":  {
+                                        "kind":  "css",
+                                        "selector":  "#fiyat-hesapla h4:has-text(\u0027Yapay Zeka Chatbot\u0027)"
+                                    },
+                        "step_id":  "toggle_chatbot",
+                        "action":  "click"
+                    },
+                    {
+                        "timeout_ms":  5000,
+                        "locator":  {
+                                        "kind":  "css",
+                                        "selector":  "#fiyat-hesapla h4:has-text(\u0027Yıllık\u0027)"
+                                    },
+                        "step_id":  "select_yearly",
+                        "action":  "click"
+                    },
+                    {
+                        "step_id":  "wait_calc",
+                        "duration_ms":  1500,
+                        "action":  "wait_for_timeout"
+                    }
+                ],
+    "start_url":  {
+                      "url":  "http://localhost:3003"
+                  },
+    "capture":  {
+                    "at_end":  [
+                                   "dom",
+                                   "accessibility",
+                                   "url"
+                               ],
+                    "events":  [
+                                   "console",
+                                   "page-errors"
+                               ]
+                }
+}

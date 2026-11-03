@@ -1,0 +1,41 @@
+{
+    "browser":  {
+                    "executable_path":  "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+                    "mode":  "launch"
+                },
+    "actions":  [
+                    {
+                        "step_id":  "wait_start",
+                        "duration_ms":  1000,
+                        "action":  "wait_for_timeout"
+                    },
+                    {
+                        "timeout_ms":  5000,
+                        "locator":  {
+                                        "kind":  "css",
+                                        "selector":  "button:has-text(\u0027Jarvis, aydınlat beni\u0027)"
+                                    },
+                        "step_id":  "click_briefing",
+                        "action":  "click"
+                    },
+                    {
+                        "step_id":  "wait_briefing_response",
+                        "duration_ms":  4000,
+                        "action":  "wait_for_timeout"
+                    }
+                ],
+    "start_url":  {
+                      "url":  "http://localhost:5173"
+                  },
+    "capture":  {
+                    "at_end":  [
+                                   "dom",
+                                   "accessibility",
+                                   "url"
+                               ],
+                    "events":  [
+                                   "console",
+                                   "page-errors"
+                               ]
+                }
+}

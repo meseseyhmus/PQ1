@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[#070a12] text-slate-200 antialiased;
+}
+
+::selection {
+  @apply bg-neon-cyan/30 text-white;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #070a12;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #164e63, #4c1d95);
+  border-radius: 999px;
+}
+
+@layer utilities {
+  .text-gradient-neon {
+    @apply bg-gradient-to-r from-neon-cyan via-sky-400 to-neon-violet bg-clip-text text-transparent;
+  }
+
+  .glass-card {
+    @apply rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-md;
+  }
+
+  .glow-border {
+    @apply border border-neon-cyan/30 shadow-glow-soft;
+  }
+
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon-cyan/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#070a12];
+  }
+}

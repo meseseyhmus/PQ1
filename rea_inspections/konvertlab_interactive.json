@@ -1,0 +1,83 @@
+{
+    "browser":  {
+                    "executable_path":  "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+                    "mode":  "launch"
+                },
+    "actions":  [
+                    {
+                        "step_id":  "wait_load",
+                        "duration_ms":  1000,
+                        "action":  "wait_for_timeout"
+                    },
+                    {
+                        "timeout_ms":  5000,
+                        "locator":  {
+                                        "kind":  "css",
+                                        "selector":  "button[role=\u0027tab\u0027]:has-text(\u0027PDF → TXT\u0027)"
+                                    },
+                        "step_id":  "click_tab_pdf2txt",
+                        "action":  "click"
+                    },
+                    {
+                        "step_id":  "wait_tab1",
+                        "duration_ms":  800,
+                        "action":  "wait_for_timeout"
+                    },
+                    {
+                        "timeout_ms":  5000,
+                        "locator":  {
+                                        "kind":  "css",
+                                        "selector":  "button[role=\u0027tab\u0027]:has-text(\u0027Markdown → PDF\u0027)"
+                                    },
+                        "step_id":  "click_tab_md2pdf",
+                        "action":  "click"
+                    },
+                    {
+                        "step_id":  "wait_tab2",
+                        "duration_ms":  800,
+                        "action":  "wait_for_timeout"
+                    },
+                    {
+                        "timeout_ms":  5000,
+                        "locator":  {
+                                        "kind":  "css",
+                                        "selector":  "button[role=\u0027tab\u0027]:has-text(\u0027Görsel → PDF\u0027)"
+                                    },
+                        "step_id":  "click_tab_img2pdf",
+                        "action":  "click"
+                    },
+                    {
+                        "step_id":  "wait_tab3",
+                        "duration_ms":  800,
+                        "action":  "wait_for_timeout"
+                    },
+                    {
+                        "timeout_ms":  5000,
+                        "locator":  {
+                                        "kind":  "css",
+                                        "selector":  "button[role=\u0027tab\u0027]:has-text(\u0027YouTube Araçları\u0027)"
+                                    },
+                        "step_id":  "click_tab_youtube",
+                        "action":  "click"
+                    },
+                    {
+                        "step_id":  "wait_tab4",
+                        "duration_ms":  1000,
+                        "action":  "wait_for_timeout"
+                    }
+                ],
+    "start_url":  {
+                      "url":  "http://localhost:3001"
+                  },
+    "capture":  {
+                    "at_end":  [
+                                   "dom",
+                                   "accessibility",
+                                   "url"
+                               ],
+                    "events":  [
+                                   "console",
+                                   "page-errors"
+                               ]
+                }
+}

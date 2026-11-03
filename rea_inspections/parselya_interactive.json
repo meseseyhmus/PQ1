@@ -1,0 +1,59 @@
+{
+    "browser":  {
+                    "executable_path":  "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+                    "mode":  "launch"
+                },
+    "actions":  [
+                    {
+                        "step_id":  "wait_load",
+                        "duration_ms":  1000,
+                        "action":  "wait_for_timeout"
+                    },
+                    {
+                        "timeout_ms":  5000,
+                        "locator":  {
+                                        "kind":  "css",
+                                        "selector":  "button:has-text(\u0027Çeşme Alaçatı\u0027)"
+                                    },
+                        "step_id":  "click_preset_cesme",
+                        "action":  "click"
+                    },
+                    {
+                        "timeout_ms":  5000,
+                        "locator":  {
+                                        "kind":  "css",
+                                        "selector":  "button:has-text(\u002716:9 Yatay\u0027)"
+                                    },
+                        "step_id":  "switch_to_16_9",
+                        "action":  "click"
+                    },
+                    {
+                        "timeout_ms":  5000,
+                        "locator":  {
+                                        "kind":  "css",
+                                        "selector":  "button[aria-label=\u0027Oynat\u0027]"
+                                    },
+                        "step_id":  "click_play",
+                        "action":  "click"
+                    },
+                    {
+                        "step_id":  "wait_playback",
+                        "duration_ms":  3000,
+                        "action":  "wait_for_timeout"
+                    }
+                ],
+    "start_url":  {
+                      "url":  "http://localhost:3004"
+                  },
+    "capture":  {
+                    "at_end":  [
+                                   "dom",
+                                   "accessibility",
+                                   "url"
+                               ],
+                    "events":  [
+                                   "console",
+                                   "page-errors"
+                               ]
+                }
+}

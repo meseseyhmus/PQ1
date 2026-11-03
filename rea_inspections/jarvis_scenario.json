@@ -1,0 +1,27 @@
+{
+    "browser":  {
+                    "executable_path":  "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+                    "mode":  "launch"
+                },
+    "actions":  [
+                    {
+                        "step_id":  "wait_jarvis",
+                        "duration_ms":  2500,
+                        "action":  "wait_for_timeout"
+                    }
+                ],
+    "start_url":  {
+                      "url":  "http://localhost:5173"
+                  },
+    "capture":  {
+                    "at_end":  [
+                                   "dom",
+                                   "accessibility",
+                                   "url"
+                               ],
+                    "events":  [
+                                   "console",
+                                   "page-errors"
+                               ]
+                }
+}

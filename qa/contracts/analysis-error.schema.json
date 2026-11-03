@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://saas.local/contracts/analysis-error.schema.json",
+  "title": "AnalyzeError",
+  "description": "POST /api/analyze hata gövdesi. 400 / 429 / 502 durumlarında döner. RATE_LIMIT durumunda dailyUsage alanı da bulunur.",
+  "type": "object",
+  "required": ["error", "code"],
+  "additionalProperties": true,
+  "properties": {
+    "error": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Kullanıcıya gösterilecek Türkçe hata mesajı."
+    },
+    "code": {
+      "type": "string",
+      "enum": ["INVALID_URL", "FETCH_FAILED", "TIMEOUT", "NOT_HTML", "RATE_LIMIT"],
+      "description": "Makine-okur hata kodu. İstemci buna göre kota modalı açabilir."
+    },
+    "dailyUsage": {
+      "type": "object",
+      "description": "Yalnızca code=RATE_LIMIT (429) olduğunda bulunur.",
+      "required": ["used", "limit"],
+      "additionalProperties": false,
+      "properties": {
+        "used": { "type": "integer", "minimum": 0 },
+        "limit": { "type": "integer", "minimum": 1 }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "saas-suite",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "SeoRadar, KonvertLab, Terneon ve Parselya projelerini birlikte geliştirme yardımcıları.",
+  "scripts": {
+    "dev:seoradar": "node scripts/dev-all.mjs --only seoradar",
+    "dev:konvertlab": "node scripts/dev-all.mjs --only konvertlab",
+    "dev:terneon": "node scripts/dev-all.mjs --only terneon",
+    "dev:parselya": "node scripts/dev-all.mjs --only parselya",
+    "dev": "node scripts/dev-all.mjs",
+    "build": "node scripts/build-all.mjs",
+    "build:seoradar": "node scripts/build-all.mjs --only seoradar",
+    "build:konvertlab": "node scripts/build-all.mjs --only konvertlab",
+    "build:terneon": "node scripts/build-all.mjs --only terneon",
+    "build:parselya": "node scripts/build-all.mjs --only parselya",
+    "status": "node scripts/status.mjs",
+    "verify": "node scripts/verify-all.mjs",
+    "verify:fast": "node scripts/verify-all.mjs --skip-build",
+    "test": "node scripts/test-all.mjs",
+    "test:all": "node scripts/test-all.mjs",
+    "qa": "node qa/run-all.mjs",
+    "health": "node qa/health-all.mjs",
+    "smoke:pages": "node scripts/smoke-pages.mjs",
+    "smoke:api": "node seoradar/scripts/smoke.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

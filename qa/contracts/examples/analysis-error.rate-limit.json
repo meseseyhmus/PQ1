@@ -1,0 +1,8 @@
+{
+  "error": "Ücretsiz günlük analiz limitine ulaştınız (3/3). Pro'ya yükselterek sınırsız analiz yapabilirsiniz.",
+  "code": "RATE_LIMIT",
+  "dailyUsage": {
+    "used": 3,
+    "limit": 3
+  }
+}
